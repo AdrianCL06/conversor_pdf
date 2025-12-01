@@ -17,44 +17,77 @@ body {
     color: #4E342E; /* Marrón oscuro para el texto */
 }
 
+/* -------------------------------------------
+ * NUEVO: ESTILO DE LA FLECHA DE REGRESO (SIN FONDO)
+ * ------------------------------------------- */
+.back-arrow {
+    position: absolute; /* CLAVE para moverla libremente */
+    top: 30px; /* Separación desde arriba */
+    left: 50%; /* Centra la columna */
+    transform: translateX(-230px); /* Mueve la flecha 230px a la izquierda del centro */
+
+    color: #6D4C41; /* Color marrón chocolate para la flecha */
+    font-size: 2.5rem; /* Tamaño más grande para la flecha */
+    font-weight: 700; /* Negrita para que sea más visible */
+    text-decoration: none; /* Quitar subrayado */
+    line-height: 1; /* Asegura que la flecha no tenga espacio extra */
+    
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 30; 
+}
+
+.back-arrow:hover {
+    color: #5D4037; /* Un poco más oscuro al pasar el mouse */
+    transform: translateX(-230px) scale(1.2); /* Mantiene la posición y agranda */
+}
+
+
 /* La tarjeta central (El formulario) */
 .card {
     background-color: #ffffff;
     padding: 40px;
-    border-radius: 24px; /* Bordes muy curvos */
-    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.08); /* Sombra marrón muy sutil */
+    border-radius: 24px; 
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.08); 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espacio entre elementos */
+    gap: 20px; 
     width: 100%;
     max-width: 400px;
     transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Pequeña flotación al pasar el mouse */
+    transform: translateY(-5px); 
+}
+
+/* Estilo del logo (si lo usas) */
+.logo-header {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%; 
+    margin-bottom: 5px;
 }
 
 /* Textos */
 .textoSubir {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #5D4037; /* Marrón café */
+    color: #5D4037; 
 }
 
 .subtitulo {
     font-size: 0.9rem;
-    color: #8D6E63; /* Marrón claro */
-    margin-top: -15px; /* Acercarlo al título */
+    color: #8D6E63; 
+    margin-top: -15px; 
     margin-bottom: 10px;
 }
 
 /* El Input y el botón X */
 .input-group {
-    background-color: #EFEBE9; /* Fondo gris/marrón muy claro */
+    background-color: #EFEBE9; 
     padding: 10px 15px;
-    border-radius: 12px;
+    border-radius: 12px; 
     width: 100%;
     display: flex;
     align-items: center;
@@ -71,17 +104,11 @@ body {
 .inputArchivo {
     font-size: 0.9rem;
     color: #5D4037;
-    
-    /* Ocupar el 85% del ancho disponible */
     width: 85%;
     max-width: 85%;
-    
-    /* Propiedades para gestionar el desbordamiento de texto */
     overflow: hidden; 
-    text-overflow: ellipsis; /* Añade '...' si el texto se corta */
-    white-space: nowrap; /* Mantiene el texto en una sola línea */
-    
-    /* Asegura que el input se pueda comprimir */
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
     flex-shrink: 1; 
 }
 
@@ -92,7 +119,7 @@ body {
     border: none;
     width: 28px;
     height: 28px;
-    border-radius: 50%; /* Círculo perfecto */
+    border-radius: 50%; 
     cursor: pointer;
     font-weight: bold;
     display: flex;
@@ -108,12 +135,12 @@ body {
 
 /* El Botón Principal (Convertir) */
 .botonConvertir {
-    background-color: #6D4C41; /* Marrón chocolate */
-    color: #fff; /* Texto blanco */
+    background-color: #6D4C41; 
+    color: #fff; 
     border: none;
     padding: 14px 30px;
     font-size: 1rem;
-    border-radius: 30px; /* Botón tipo píldora */
+    border-radius: 30px; 
     cursor: pointer;
     font-weight: 700;
     box-shadow: 0 4px 15px rgba(109, 76, 65, 0.3);
@@ -122,17 +149,12 @@ body {
 }
 
 .botonConvertir:hover {
-    background-color: #5D4037; /* Un poco más oscuro al pasar el mouse */
-    transform: scale(1.02); /* Crece un poco */
+    background-color: #5D4037; 
+    transform: scale(1.02); 
 }
 
-.botonConvertir:disabled {
-    background-color: #D7CCC8; /* Color apagado si está deshabilitado */
-    cursor: not-allowed;
-    box-shadow: none;
-}
-.botonBorrar:disabled {
-    background-color: #D7CCC8; /* Color apagado si está deshabilitado */
+.botonConvertir:disabled, .botonBorrar:disabled {
+    background-color: #D7CCC8; 
     cursor: not-allowed;
     box-shadow: none;
 }
