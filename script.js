@@ -1,6 +1,29 @@
 const botonConvertir = document.querySelector(".botonConvertir");
 const input = document.querySelector(".inputArchivo")
-const formulario = document.querySelector('#form');
+const botonBorrar = document.querySelector(".botonBorrar");
+
+botonBorrar.disabled = true;
+
+// 1. Ocultar o deshabilitar el botón de borrar si no hay archivo.
+input.addEventListener('change', () => {
+    // Habilita el botón de convertir si hay un archivo
+    botonConvertir.disabled = !input.files.length;
+    // Habilita el botón de borrar (X) si hay un archivo
+    botonBorrar.disabled = !input.files.length; 
+});
+
+
+// 2. Lógica para el botón 'X'
+botonBorrar.addEventListener('click', () => {
+    // A. Vacía el input de archivo
+    input.value = "";
+    
+    // B. Deshabilita el botón de convertir
+    botonConvertir.disabled = true;
+    
+    // C. Deshabilita el propio botón de borrar (X)
+    botonBorrar.disabled = true; 
+});
 
 //la libreria para pasar a PDF
 const { jsPDF } = window.jspdf;
