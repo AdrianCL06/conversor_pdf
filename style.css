@@ -67,11 +67,25 @@ body {
     border: 1px solid #D7CCC8;
 }
 
-/* Estilizar el input de archivo es difícil, pero esto lo limpia un poco */
+/* * CORRECCIÓN CLAVE: 
+* Propiedades para forzar que el texto del nombre del archivo se corte
+* con puntos suspensivos en lugar de desbordar el contenedor.
+*/
 .inputArchivo {
     font-size: 0.9rem;
     color: #5D4037;
+    
+    /* 1. Ocupar el 85% del ancho disponible */
     width: 85%;
+    max-width: 85%;
+    
+    /* 2. Propiedades para gestionar el desbordamiento de texto */
+    overflow: hidden; 
+    text-overflow: ellipsis; /* Añade '...' si el texto se corta */
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+    
+    /* 3. Asegura que el input se pueda comprimir */
+    flex-shrink: 1; 
 }
 
 /* El botón de borrar (X) */
@@ -88,6 +102,9 @@ body {
     align-items: center;
     justify-content: center;
     transition: background 0.3s;
+    
+    /* Esto es importante: evita que el botón 'X' se haga más pequeño */
+    flex-shrink: 0;
 }
 
 .botonBorrar:hover {
