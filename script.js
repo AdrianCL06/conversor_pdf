@@ -3,6 +3,7 @@ const input = document.querySelector(".inputArchivo")
 const botonBorrar = document.querySelector(".botonBorrar");
 
 botonBorrar.disabled = true;
+botonConvertir.disabled = true;
 
 // 1. Ocultar o deshabilitar el botón de borrar si no hay archivo.
 input.addEventListener('change', () => {
