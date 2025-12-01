@@ -90,7 +90,7 @@ body {
 
 /* El botón de borrar (X) */
 .botonBorrar {
-    background-color: #D7CCC8;
+    background-color: #6D4C41;
     color: #fff;
     border: none;
     width: 28px;
@@ -132,6 +132,11 @@ body {
 }
 
 .botonConvertir:disabled {
+    background-color: #D7CCC8; /* Color apagado si está deshabilitado */
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.botonBorrar:disabled {
     background-color: #D7CCC8; /* Color apagado si está deshabilitado */
     cursor: not-allowed;
     box-shadow: none;
