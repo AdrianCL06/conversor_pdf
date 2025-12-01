@@ -17,29 +17,7 @@ body {
     color: #4E342E; /* Marrón oscuro para el texto */
 }
 
-/* -------------------------------------------
- * NUEVO: ESTILO DE LA FLECHA DE REGRESO (SIN FONDO)
- * ------------------------------------------- */
-.back-arrow {
-    position: absolute; /* CLAVE para moverla libremente */
-    top: 30px; /* Separación desde arriba */
-    left: 50%; /* Centra la columna */
-    transform: translateX(-230px); /* Mueve la flecha 230px a la izquierda del centro */
 
-    color: #6D4C41; /* Color marrón chocolate para la flecha */
-    font-size: 2.5rem; /* Tamaño más grande para la flecha */
-    font-weight: 700; /* Negrita para que sea más visible */
-    text-decoration: none; /* Quitar subrayado */
-    line-height: 1; /* Asegura que la flecha no tenga espacio extra */
-    
-    transition: color 0.3s ease, transform 0.3s ease;
-    z-index: 30; 
-}
-
-.back-arrow:hover {
-    color: #5D4037; /* Un poco más oscuro al pasar el mouse */
-    transform: translateX(-230px) scale(1.2); /* Mantiene la posición y agranda */
-}
 
 
 /* La tarjeta central (El formulario) */
