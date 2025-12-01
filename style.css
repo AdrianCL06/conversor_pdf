@@ -1,0 +1,121 @@
+/* 1. Reset básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif; /* Fuente redondeada */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Fondo color crema suave (Oatmeal) */
+    background-color: #FDFcf6; 
+    color: #4E342E; /* Marrón oscuro para el texto */
+}
+
+/* 2. La tarjeta central (El formulario) */
+.card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 24px; /* Bordes muy curvos */
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.08); /* Sombra marrón muy sutil */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre elementos */
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Pequeña flotación al pasar el mouse */
+}
+
+/* 3. Textos */
+.textoSubir {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5D4037; /* Marrón café */
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    color: #8D6E63; /* Marrón claro */
+    margin-top: -15px; /* Acercarlo al título */
+    margin-bottom: 10px;
+}
+
+/* 4. El Input y el botón X */
+.input-group {
+    background-color: #EFEBE9; /* Fondo gris/marrón muy claro */
+    padding: 10px 15px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+}
+
+.input-group:hover {
+    border: 1px solid #D7CCC8;
+}
+
+/* Estilizar el input de archivo es difícil, pero esto lo limpia un poco */
+.inputArchivo {
+    font-size: 0.9rem;
+    color: #5D4037;
+    width: 85%;
+}
+
+/* El botón de borrar (X) */
+.botonBorrar {
+    background-color: #D7CCC8;
+    color: #fff;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%; /* Círculo perfecto */
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.botonBorrar:hover {
+    background-color: #BCAAA4;
+}
+
+/* 5. El Botón Principal (Convertir) */
+.botonConvertir {
+    background-color: #6D4C41; /* Marrón chocolate */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 14px 30px;
+    font-size: 1rem;
+    border-radius: 30px; /* Botón tipo píldora */
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(109, 76, 65, 0.3);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.botonConvertir:hover {
+    background-color: #5D4037; /* Un poco más oscuro al pasar el mouse */
+    transform: scale(1.02); /* Crece un poquito */
+}
+
+.botonConvertir:disabled {
+    background-color: #D7CCC8; /* Color apagado si está deshabilitado */
+    cursor: not-allowed;
+    box-shadow: none;
+}
